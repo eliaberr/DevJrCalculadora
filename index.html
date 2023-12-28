@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculcadora Plus</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div>
+    <div class="container">
+        <div class="calculadora">
             <img src="assets/logo.svg" alt="">
             <h1>Calculadora</h1>
-            <input type="number">
-            <input type="number">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-        </div>
-        <div>
+            
+            <input type="number" placeholder="Digite Um Número" >
+            <input type="number" placeholder="Digite Um Número" >
+            
+            <div>
+                <button onclick="calc()">+</button>
+                <button onclick="calc()">-</button>
+                <button onclick="calc()">*</button>
+                <button onclick="calc()">/</button>
+            </div>
+
             <input readonly>
         </div>
+        <div class="historico">
+            <h1>Histórico</h1>
+            <input readonly class="inputHistorico">
+        </div>
     </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
