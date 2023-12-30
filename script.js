@@ -12,7 +12,7 @@ function calc(op){
             break;
 
         case '-':
-            res = num1-num2"
+            res = num1-num2
             break;
 
         case '*':
@@ -24,11 +24,18 @@ function calc(op){
             break;
     }
 
-    
-
-
-
     document.getElementById("display").value = res;
+
+    var newHistoey = "<div>" + num1 + " " + op + " " + num2 + " " +"=" +  " " + res + "</div>";
+    var history = document.getElementById("history");
+
+    history.innerHTML = newHistoey + history.innerHTML
+
+    if(history.children.length > 10){
+        history.removeChild(history.childNodes[10]);
+    }
+
+
 
 
 
